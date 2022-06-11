@@ -7,7 +7,6 @@ const cloudinary = require("cloudinary");
 // Create Product -- Admin
 exports.createProduct = catchAsyncErrors(async (req, res, next) => {
   let images = [];
-  console.log('Creating product: ', req.body)
   if (typeof req.body.images === "string") {
     images.push(req.body.images);
   } else {
